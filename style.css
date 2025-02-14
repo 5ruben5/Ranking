@@ -1,0 +1,109 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1F2937; /* Fondo oscuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #003247; /* Azul marino */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: #ffffff; /* Texto blanco */
+    font-weight: 600;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    margin-bottom: 25px;
+}
+
+/* Campos de entrada */
+input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #607cff; /* Azul claro */
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #1F2937; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #2247f4; /* Azul oscuro */
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #607cff; /* Azul claro */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2247f4; /* Azul oscuro */
+}
+
+/* Lista de ranking */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #1F2937; /* Fondo oscuro */
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #ffffff; /* Texto blanco */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-2px);
+}
+
+/* Estilo para el número de posición */
+li::before {
+    content: attr(data-pos);
+    font-weight: bold;
+    color: #607cff; /* Azul claro */
+    margin-right: 10px;
+}
+
+/* Ajuste para el icono de la corona */
+li span {
+    margin-left: 5px;
+}
