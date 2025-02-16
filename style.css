@@ -1,63 +1,63 @@
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1F2937; /* Fondo oscuro */
+    background-color: #1F2937;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: #ffffff; /* Texto blanco */
+    min-height: 100vh;
+    color: #ffffff;
+    text-align: center;
 }
 
 /* Contenedor principal */
 .container {
-    background-color: #003247; /* Azul marino */
+    background-color: #003247;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    width: 350px;
-    text-align: center;
+    width: 90%;
+    max-width: 400px;
 }
 
 /* Título */
 h1 {
-    margin-bottom: 25px;
-    font-size: 26px;
-    color: #ffffff; /* Texto blanco */
+    margin-bottom: 20px;
+    font-size: 24px;
     font-weight: 600;
 }
 
 /* Contenedor del formulario */
 .form-container {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 /* Campos de entrada */
 input {
-    width: calc(100% - 24px);
+    width: calc(100% - 20px);
     padding: 12px;
     margin-bottom: 15px;
-    border: 2px solid #607cff; /* Azul claro */
+    border: 2px solid #607cff;
     border-radius: 8px;
     font-size: 16px;
-    background-color: #1F2937; /* Fondo oscuro */
-    color: #ffffff; /* Texto blanco */
+    background-color: #1F2937;
+    color: #ffffff;
     outline: none;
     transition: border-color 0.3s ease;
 }
 
 input:focus {
-    border-color: #2247f4; /* Azul oscuro */
+    border-color: #2247f4;
 }
 
 /* Botón */
 button {
     width: 100%;
     padding: 12px;
-    background-color: #607cff; /* Azul claro */
-    color: #ffffff; /* Texto blanco */
+    background-color: #607cff;
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     font-size: 16px;
@@ -67,7 +67,7 @@ button {
 }
 
 button:hover {
-    background-color: #2247f4; /* Azul oscuro */
+    background-color: #2247f4;
 }
 
 /* Lista de ranking */
@@ -75,15 +75,26 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Personalización del scrollbar en la lista */
+ul::-webkit-scrollbar {
+    width: 8px;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: #607cff;
+    border-radius: 4px;
 }
 
 li {
-    background-color: #1F2937; /* Fondo oscuro */
+    background-color: #1F2937;
     padding: 12px;
     margin-bottom: 10px;
     border-radius: 8px;
     font-size: 16px;
-    color: #ffffff; /* Texto blanco */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,11 +110,78 @@ li:hover {
 li::before {
     content: attr(data-pos);
     font-weight: bold;
-    color: #607cff; /* Azul claro */
+    color: #607cff;
     margin-right: 10px;
 }
 
-/* Ajuste para el icono de la corona */
-li span {
-    margin-left: 5px;
+/* Botón de eliminar */
+.eliminar {
+    background: none;
+    border: none;
+    font-size: 12px; /* Tamaño más pequeño */
+    padding: 5px;
+    cursor: pointer;
+    color: #ff4d4d;
+    transition: color 0.3s ease;
+    width: 24px; /* Ancho reducido */
+    height: 24px; /* Alto reducido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Forma redonda */
+}
+
+.eliminar:hover {
+    color: #ff1a1a;
+    background-color: rgba(255, 77, 77, 0.2); /* Efecto al pasar el mouse */
+}
+
+/* ---------------------- */
+/* 🔹 ESTILOS RESPONSIVE 🔹 */
+/* ---------------------- */
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+    
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
